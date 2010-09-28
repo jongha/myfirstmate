@@ -1,0 +1,353 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+SAVEPOST.HTML           HTML                    ".\\html\\savepost.html"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MFMMANAGERDLG DIALOGEX 0, 0, 255, 281
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "MFM Post It"
+FONT 9, "굴림", 400, 0, 0x81
+BEGIN
+    CONTROL         "등록이 완료되면 대화 상자를 닫음(&C)",IDC_CHKAUTOCLOSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,67,196,10
+    DEFPUSHBUTTON   "등록(&S)",IDC_BTNSAVEPOST,148,81,49,16
+    PUSHBUTTON      "취소",IDCANCEL,199,81,49,16
+    PUSHBUTTON      "자세히 ▼",IDC_SHOWMESSAGE,7,81,49,16
+    EDITTEXT        IDC_TXTORGCONTETNS,34,142,205,92,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_TXTCURRENTLOCATION,35,122,204,14,NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "제목:",IDC_STATIC,13,124,17,8
+    LTEXT           "본문:",IDC_STATIC,13,142,17,8
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",0x1,7,56,196,7
+    CONTROL         "서버에 링크된 데이터 저장",IDC_CHKTAGPARSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,237,98,10
+    LTEXT           "",IDC_STATIC,7,41,194,8
+    LTEXT           "0%",IDC_PERCENT,206,57,26,8
+    CONTROL         "",IDC_ANIMATE,"SysAnimate32",ACS_TRANSPARENT | WS_TABSTOP,7,7,196,32
+    LTEXT           "등록 준비",IDC_STATICMESSAGE,7,45,196,8
+    PUSHBUTTON      "클립보드 복사",IDC_BTNCOPYCLIPBOARD,148,258,49,16
+    PUSHBUTTON      "파일로 저장...",IDC_SAVETOLOCAL,199,258,49,16
+    PUSHBUTTON      "옵션(&O)...",IDC_BTNOPTION,7,258,49,16
+    GROUPBOX        "MFM 등록 설정",IDC_STATIC,7,108,241,146
+END
+
+IDD_CONFIGURATIONDLG DIALOGEX 0, 0, 231, 219
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MFM 환경설정"
+FONT 9, "굴림", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "기본값 복원...",IDC_BTNSETDEFAULT,7,196,61,16
+    DEFPUSHBUTTON   "저장(&S)",IDC_BTNSAVE,122,196,49,16
+    PUSHBUTTON      "취소(&C)",IDCANCEL,175,196,49,16
+    LTEXT           "",IDC_CONTROLPLACEHOLDER,8,24,215,163
+    CONTROL         "",IDC_TABPANEL,"SysTabControl32",0x0,7,7,217,185
+END
+
+IDD_LOGINDLG DIALOGEX 0, 0, 159, 125
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MFM 회원 로그인"
+FONT 9, "굴림", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "로그인(&L)",IDC_BTNLOGIN,51,49,49,16
+    PUSHBUTTON      "취소(&C)",IDCANCEL,103,49,49,16
+    LTEXT           "아이디:",IDC_STATIC,9,9,27,8
+    LTEXT           "패스워드:",IDC_STATIC,9,29,35,8
+    EDITTEXT        IDC_TXTUSERID,46,7,106,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TXTPASSWORD,46,27,106,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,7,45,145,1
+    LTEXT           "MFM Scrap 서비스를 이용을 위한 로그인 입니다. 사이트에 가입하실때 사용하신 아이디와 비밀번호를 입력해주세요.",IDC_STATIC,7,71,145,27
+    CONTROL         "",IDC_LOGINPROGRESS,"msctls_progress32",WS_BORDER | 0x1,7,99,145,7
+    LTEXT           "",IDC_STATICMESSAGE,7,110,145,8
+END
+
+IDD_LOGOUTDLG DIALOGEX 0, 0, 177, 77
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MFM 회원 로그아웃"
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "로그아웃(&L)",IDC_BTNLOGOUT,66,56,50,14
+    PUSHBUTTON      "취소(&C)",IDCANCEL,120,56,50,14
+    LTEXT           "",IDC_LOGINMESSAGE,7,7,163,44
+END
+
+IDD_CONFIGURATIONNETWORKDLG DIALOGEX 0, 0, 213, 134
+STYLE DS_SETFONT | WS_CHILD | WS_SYSMENU
+FONT 9, "굴림", 400, 0, 0x81
+BEGIN
+    EDITTEXT        IDC_TXTHOMEPAGE,61,18,137,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TXTDOMAIN,61,35,137,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TXTPORT,61,52,137,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TXTOPERATIONURI,61,68,137,13,ES_AUTOHSCROLL
+    GROUPBOX        "서버 설정",IDC_STATIC,7,7,199,79
+    LTEXT           "도메인:",IDC_STATIC,16,38,31,8
+    LTEXT           "포트:",IDC_STATIC,16,55,22,8
+    LTEXT           "실행 URI:",IDC_STATIC,16,71,40,8
+    LTEXT           "홈페이지:",IDC_STATIC,16,22,41,8
+    GROUPBOX        "검색 서비스",IDC_STATIC,7,90,199,37
+    EDITTEXT        IDC_TXTSEARCHURI,61,106,137,13,ES_AUTOHSCROLL
+    LTEXT           "검색 URI:",IDC_STATIC,16,109,40,8
+END
+
+IDD_ABOUTDLG DIALOGEX 0, 0, 229, 87
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MFM 툴바 정보"
+FONT 9, "굴림", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,173,64,49,16
+    ICON            IDI_ICONABOUTDLG,IDC_STATIC,17,21,20,20
+    LTEXT           "MyFirstMate Toolbar 0.9 Beta",IDC_STATIC,59,23,96,8
+    LTEXT           "2006/06/04",IDC_STATIC,58,35,94,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MFMMANAGERDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+        HORZGUIDE, 97
+        HORZGUIDE, 108
+    END
+
+    IDD_CONFIGURATIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_LOGINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_LOGOUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_CONFIGURATIONNETWORKDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_ABOUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDR_ANIDOWNLOAD         AVI                     "AniDownload.avi"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONOPTIONDLG       ICON                    "res\\TOOLS2.ICO"
+IDI_ICONMANAGEDLG       ICON                    "res\\Script.ico"
+IDI_ICONABOUTDLG        ICON                    "res\\About.ico"
+IDI_ICONSESSIONDLG      ICON                    "res\\LOCK.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINPOPMENU MENU 
+BEGIN
+    POPUP "MFM"
+    BEGIN
+        MENUITEM "Onpis 홈페이지",                  IDM_MFM_ONPISHOME
+        MENUITEM SEPARATOR
+        MENUITEM "환경설정...",                     IDM_MFM_OPTION
+        MENUITEM "세션관리...",                     ID_MFM_SESSION
+        POPUP "도움말"
+        BEGIN
+            MENUITEM "MFM 툴바 정보...",                IDM_MFM_ABOUT
+        END
+    END
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""MyFirstMateBar.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,1
+ PRODUCTVERSION 1,2,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Onpis Corp."
+            VALUE "FileDescription", "MyFirstMateBar Module"
+            VALUE "FileVersion", "1, 2, 0, 1"
+            VALUE "InternalName", "MFM"
+            VALUE "LegalCopyright", "Copyright 2006"
+            VALUE "OriginalFilename", "MyFirstMateBar.DLL"
+            VALUE "ProductName", "MyFirstMateBar Module"
+            VALUE "ProductVersion", "1, 2, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_MyFirstMateBarBAND  REGISTRY                "MyFirstMateBarBand.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_IETOOLBAR           BITMAP                  "toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "MyFirstMateBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON1              "Button 1"
+    ID_BUTTON2              "Button 2"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "MyFirstMateBar.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

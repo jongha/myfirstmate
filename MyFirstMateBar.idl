@@ -1,0 +1,39 @@
+// MyFirstMateBar.idl : IDL source for MyFirstMateBar.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MyFirstMateBar.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(14C959B0-2D37-4bfc-A05F-AE75A9820B22),
+		dual,
+		helpstring("IMyFirstMateBarBand Interface"),
+		pointer_default(unique)
+	]
+	interface IMyFirstMateBarBand : IDispatch
+	{
+		[id(1), helpstring("method SetSavePost")] HRESULT SetSavePost(BSTR Location, BSTR Contents);
+	};
+
+[
+	uuid(8DD3E548-66C0-498a-BA65-67A45A795AB5),
+	version(1.0),
+	helpstring("MyFirstMateBar 1.0 Type Library")
+]
+library MyFirstMateBarLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(F1518563-F371-4c52-B70E-DE39A14265CE),
+		helpstring("MyFirstMateBarBand Class")
+	]
+	coclass MyFirstMateBarBand
+	{
+		[default] interface IMyFirstMateBarBand;
+	};
+};

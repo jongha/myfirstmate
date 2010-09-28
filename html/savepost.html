@@ -1,0 +1,14 @@
+<html>
+<object	id=MFMControl align=top  classid="clsid:F1518563-F371-4c52-B70E-DE39A14265CE" width=1 height=1 border=0 vspace=0></object>
+<SCRIPT LANGUAGE="JavaScript">
+	var win = external.menuArguments;
+	var doc = win.document;
+	var sel = doc.selection;
+	var rng = sel.createRange();
+	var str = new String(rng.htmlText);
+	var href = doc.URLUnencoded;
+
+	var objMFM = document.getElementById("MFMControl");
+	objMFM.SetSavePost(href, str);
+</SCRIPT>
+</html>
